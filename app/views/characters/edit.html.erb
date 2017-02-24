@@ -1,0 +1,37 @@
+<h1>Let's Edit <%= @character.name %></h1>
+
+<form action="/characters/<%= @character.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="character[name]">Name of Character:</label>
+  <br>
+  <input name="character[name]" value="<%= @character.name %>">
+
+  <br>
+  <br>
+
+  <label for="character[gender]">Gender:</label>
+  <br>
+  <input name="character[gender]" value="<%= @character.gender %>">
+
+  <br>
+  <br>
+
+  <label for="character[img_url]">URL for their Picture:</label>
+  <br>
+  <input name="character[img_url]" value="<%= @character.img_url %>">
+
+  <br>
+  <br>
+
+  <label for="character[status]">Are they "alive" or "deceased"?:</label>
+  <br>
+  <input name="character[status]" value="<%= @character.status %>">
+
+  <br>
+  <br>
+  <br>
+
+  <input type="submit" value="Update Character">
+</form>

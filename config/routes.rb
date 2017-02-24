@@ -13,5 +13,8 @@ Rails.application.routes.draw do
 
   get "/characters/:id/new" => "characters#new"
   post "/characters/:id/create" => "characters#create"
+  get "/characters/:id/edit" => "characters#edit"
+  put "/characters/:id" => "characters#update"
+  delete "/characters/:id" => "characters#destroy"
   get "/characters/:id" => "characters#show"
 end
