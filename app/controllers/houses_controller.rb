@@ -38,7 +38,10 @@ class HousesController < ApplicationController
 
 
   def destroy
+    @house = House.find(params[:id])
+    @house.destroy
 
+    redirect_to "/index"
   end
 
 
