@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   delete "/houses/:id" => "houses#destroy"
   get "/select_house" => "houses#join"
 
+  get "/characters/:id/new" => "characters#new"
+  post "/characters/:id/create" => "characters#create"
   get "/characters/:id" => "characters#show"
 end

@@ -1,0 +1,36 @@
+<h1>Let's make a new character!</h1>
+
+<form action="/characters/<%= @house.id %>/create" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="character[name]">Name of Character:</label>
+  <br>
+  <input name="character[name]">
+
+  <br>
+  <br>
+
+  <label for="character[gender]">Gender:</label>
+  <br>
+  <input name="character[gender]">
+
+  <br>
+  <br>
+
+  <label for="character[img_url]">URL for their Picture:</label>
+  <br>
+  <input name="character[img_url]">
+
+  <br>
+  <br>
+
+  <label for="character[status]">Are they "alive" or "deceased"?:</label>
+  <br>
+  <input name="character[status]">
+
+  <br>
+  <br>
+  <br>
+
+  <input type="submit" value="Create Character">
+</form>

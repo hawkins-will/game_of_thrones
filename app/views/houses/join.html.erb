@@ -1,8 +1,14 @@
 <h1>What House is This Character In?</h1>
 
-<% @houses.each do |house| %>
-<div class="house_box">
-  <h2><a href="#"><%= house.name %></a></h2>
-  <img class="index_sigil" src="<%= house.sigil_url %>" alt="House <%= house.name %> Sigil'">
-</div>
-<% end %>
+  <div class="character_section">
+  <% @houses.each do |house| %>
+  <a href="/characters/<%= house.id %>/new"><div class="house_box">
+    <img class="index_sigil" src="<%= house.sigil_url %>" alt="House <%= house.name %> Sigil'">
+    <% unless house.name == "The Night's Watch" %>
+      <h2> House <%= house.name %></h2>
+    <% else %>
+      <h2>The Night's Watch</h2>
+    <% end %>
+  </div>
+  <% end %>
+</div></a>

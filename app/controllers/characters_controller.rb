@@ -6,11 +6,15 @@ class  CharactersController < ApplicationController
 
 
   def new
-
+    @house = House.find(params[:id])
+    @character = Character.new
   end
 
   def create
+    @house = House.find(params[:id])
+    @character = @house.characters.create!(character_params)
 
+    redirect_to "/characters/#{@character.id}"
   end
 
 
@@ -28,5 +32,8 @@ class  CharactersController < ApplicationController
 
   end
 
-
+  private
+  def character_params
+    params.require(:character).permit(:name, :gender, :img_url, :status)
+  end
 end

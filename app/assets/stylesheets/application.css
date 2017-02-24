@@ -54,11 +54,15 @@ html {
 .house_box {
   border: 10px solid grey;
   border-radius: 10px;
-  width: 250px;
+  width: 240px;
   height: 400px;
   margin: 10px;
   padding: 10px;
   background: beige;
+}
+
+.house_box:hover {
+  background-color: rgba(0, 0, 128, 0.5);
 }
 
 .index_sigil {
@@ -96,9 +100,12 @@ nav {
   background: beige;
 }
 
+.character_box:hover {
+  background-color: rgba(0, 0, 128, 0.5);
+}
+
 .character_section {
   display: flex;
   width: 1000px;
   flex-wrap: wrap;
-  justify-content: space-between;
 }

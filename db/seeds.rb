@@ -24,7 +24,7 @@ watch = House.create(name: "The Night's Watch", sigil_url: "http://vignette4.wik
 
 lysa = arryn.characters.create(name: "Lysa Tully", gender: "female", img_url: "http://vignette3.wikia.nocookie.net/gameofthrones/images/4/46/LysaArryn.png/revision/latest?cb=20140523133128", status: "deceased")
 robin = arryn.characters.create(name: "Robin Arryn", gender: "male", img_url: "http://vignette4.wikia.nocookie.net/gameofthrones/images/7/74/Robin_Aaryn_Book_of_Stranger.jpg/revision/latest?cb=20160714005525", status: "alive")
-walder = frey.characters.create(name: "Walder Frey", gender: "male", img_url: "http://vignette4.wikia.nocookie.net/gameofthrones/images/e/e4/S06E06_-_Walder_Frey_Cropped_new.jpg/revision/latest?cb=20161215025257", status: "alive")
+walder = frey.characters.create(name: "Walder Frey", gender: "male", img_url: "http://vignette4.wikia.nocookie.net/gameofthrones/images/e/e4/S06E06_-_Walder_Frey_Cropped_new.jpg/revision/latest?cb=20161215025257", status: "deceased")
 balon = greyjoy.characters.create(name: "Balon Greyjoy", gender: "male", img_url: "http://vignette2.wikia.nocookie.net/gameofthrones/images/2/27/Balon_Season_6.jpg/revision/latest?cb=20160211221219", status: "deceased")
 euron = greyjoy.characters.create(name: "Euron Greyjoy", gender: "male", img_url: "http://vignette3.wikia.nocookie.net/gameofthrones/images/4/4d/Game-of-thrones-6x5_euron_promo..jpg/revision/latest?cb=20160523192637", status: "alive")
 yara = greyjoy.characters.create(name: "Yara Greyjoy", gender: "female", img_url: "http://vignette2.wikia.nocookie.net/gameofthrones/images/a/a8/Game_of_thrones_6x5_yara_promo.jpg/revision/latest?cb=20160808022737", status: "alive")

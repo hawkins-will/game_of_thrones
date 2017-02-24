@@ -1,11 +1,25 @@
 <h1>Houses of Westeros (<a href="/houses/new">+</a>)</h1>
 
-<% @houses.each do |house| %>
-<div class="house_box">
-  <h2><a href="/houses/<%= house.id %>"><%= house.name %></a></h2>
-  <img class="index_sigil" src="<%= house.sigil_url %>" alt="House <%= house.name %> Sigil'">
-  <p><%= house.words %></p>
-</div>
-<% end %>
+<div class="character_section">
+  <% @houses.each do |house| %>
+  <a href="/houses/<%= house.id %>"><div class="house_box">
+    <img class="index_sigil" src="<%= house.sigil_url %>" alt="House <%= house.name %> Sigil'">
+    <% unless house.name == "The Night's Watch" %>
+      <h2> House <%= house.name %></h2>
+    <% else %>
+      <h2>The Night's Watch</h2>
+    <% end %>
+  </div></a>
+  <% end %>
 
-<a href="/select_house"><p>Create Character</p></a>
+  <a href="/houses/new"><div class="house_box add_box">
+    <p>+</p>
+    <p>Add House</p>
+  </div></a>
+
+  <a href="/select_house"><div class="house_box add_box">
+    <p>+</p>
+    <p>Add Character</p>
+  </div></a>
+
+</div>
