@@ -2,7 +2,7 @@
 
 <% @houses.each do |house| %>
 <div class="house_box">
-  <h2><a href="/houses/<%= house.id %>"><%= house.name %></a></h2>
+  <h2><a href="#"><%= house.name %></a></h2>
   <img class="index_sigil" src="<%= house.sigil_url %>" alt="House <%= house.name %> Sigil'">
 </div>
 <% end %>
