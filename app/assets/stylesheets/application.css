@@ -77,6 +77,28 @@ nav {
 }
 
 .show_sigil {
+  width: 400px;
+  height: 480px;
+}
+
+.headshot {
+  width: 240px;
+  height: 360px;
+}
+
+.character_box {
+  border: 10px solid grey;
+  border-radius: 10px;
+  width: 240px;
   height: 400px;
-  width: 480px;
+  margin: 10px;
+  padding: 10px;
+  background: beige;
+}
+
+.character_section {
+  display: flex;
+  width: 1000px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

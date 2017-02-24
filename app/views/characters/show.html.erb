@@ -1,0 +1,10 @@
+<h1><%= @character.name %></h1>
+
+<img src="<%= @character.img_url %>" alt="<%= @character.name %>'s Photo">
+
+<h4>Health Status:</h4>
+<p><%= @character.status.capitalize %></p>
+
+<p><a href="#">EDIT</a></p>
+<p><a href="#">KILL</a></p>
+<p><a href="/houses/<%= @character.house.id %>">BACK</a></p>

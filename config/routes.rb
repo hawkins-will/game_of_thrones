@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get "/houses/:id" => "houses#show"
   delete "/houses/:id" => "houses#destroy"
   get "/select_house" => "houses#join"
+
+  get "/characters/:id" => "characters#show"
 end

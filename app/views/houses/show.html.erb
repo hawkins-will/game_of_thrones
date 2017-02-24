@@ -1,8 +1,12 @@
 <h1><%= @house.name %> (<a href="/houses/<%= @house.id %>/edit">EDIT</a>)</h1>
 <img class="show_sigil" src="<%= @house.sigil_url %>" alt="House <%= @house.name %> Sigil'">
 
-<h2>Members of House <%= @house.name %></h2>
-<% @house.characters.each do |character| %>
-  <p><%= character.name %></p>
-<% end %>
-<p><a href="#">Create Character</a></p>
+<h2>Members of House <%= @house.name %> (<a href="#">+</a>)</h2>
+<div class="character_section">
+  <% @house.characters.each do |character| %>
+    <div class="character_box">
+      <img class="headshot" src="<%= character.img_url %>" alt="<%= character.name %>'s Picture">
+      <p><a href="/characters/<%= character.id %>"><%= character.name %></a></p>
+    </div>
+  <% end %>
+</div>
