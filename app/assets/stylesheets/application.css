@@ -14,9 +14,14 @@
  *= require_self
  */
  @font-face {
-   font-family: "thrones";
-   src: url('game_of_thrones.ttf') format("truetype");
- }
+  font-family: "thrones";
+  src: url('game_of_thrones.ttf') format("truetype");
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 
 html {
   background: url("http://vignette2.wikia.nocookie.net/gameofthrones/images/7/7e/The_known_world_HBO.jpg/revision/latest?cb=20130507121142");
@@ -25,17 +30,28 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "thrones";
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  margin: -10px -10px 0px -10px;
+  font-size: 24px;
+  color: gold;
 }
 
 .content_box {
   width: 1000px;
   height: 630px;
-  border: 10px solid grey;
+  border: 10px solid black;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
   overflow: scroll;
-  background: white;
+  background: beige;
   padding: 10px;
 }
 
@@ -48,17 +64,23 @@ html {
   height: 650px;
   margin: -10px;
   margin-top: 10px;
-  background-color: white;
+  background-color: beige;
 }
 
 .house_box {
-  border: 10px solid grey;
+  border: 10px solid black;
   border-radius: 10px;
   width: 240px;
   height: 400px;
   margin: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
   padding: 10px;
-  background: beige;
+  background: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .house_box:hover {
@@ -73,11 +95,12 @@ html {
 nav {
   width: 1020px;
   height: 50px;
-  background-color: grey;
+  background-color: black;
   margin: -26px -30px 0px -10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .show_sigil {
@@ -91,21 +114,45 @@ nav {
 }
 
 .character_box {
-  border: 10px solid grey;
+  border: 10px solid black;
   border-radius: 10px;
   width: 240px;
   height: 400px;
   margin: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
   padding: 10px;
-  background: beige;
+  background: rgba(0,128,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.deceased {
+  background-color: rgba(128,0,0,0.5);
 }
 
 .character_box:hover {
-  background-color: rgba(0, 0, 128, 0.5);
+  background-color: rgba(0, 0, 128, .5);
 }
 
 .character_section {
   display: flex;
   width: 1000px;
   flex-wrap: wrap;
+}
+
+.buttons {
+  font-size: 18px;
+  border: 2px solid grey;
+  background: rgba(0, 0, 128, 1);
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  font-weight: normal;
+}
+
+.buttons:hover {
+  background: rgba(0, 0, 128, .5);
 }

@@ -1,8 +1,13 @@
-<h1><%= @character.name %> (<a href="/characters/<%= @character.id %>/edit">EDIT</a>)</h1>
+<h1><%= @character.name %></h1>
 
 <img src="<%= @character.img_url %>" alt="<%= @character.name %>'s Photo">
 
 <h4>Health Status:</h4>
 <p><%= @character.status.capitalize %></p>
 
-<p><a href="/houses/<%= @character.house.id %>">BACK</a></p>
+<a href="/characters/<%= @character.id %>/edit">
+  <p><span class="buttons">EDIT</span></p>
+</a>
+<a href="/houses/<%= @character.house.id %>">
+  <p><span class="buttons">BACK</span></p>
+</a>

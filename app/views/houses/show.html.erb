@@ -1,14 +1,21 @@
-<h1><%= @house.name %> (<a href="/houses/<%= @house.id %>/edit">EDIT</a>)</h1>
+<h1><%= @house.name %> <a href="/houses/<%= @house.id %>/edit"><span class="buttons">EDIT</span></a></h1>
 <img class="show_sigil" src="<%= @house.sigil_url %>" alt="House <%= @house.name %> Sigil'">
 <h3>"<%= @house.words %>"</h3>
 
-<h2>Members of House <%= @house.name %> (<a href="#">+</a>)</h2>
+<h2>Members of House <%= @house.name %></h2>
 <div class="character_section">
   <% @house.characters.each do |character| %>
-    <a href="/characters/<%= character.id %>"><div class="character_box">
-      <img class="headshot" src="<%= character.img_url %>" alt="<%= character.name %>'s Picture">
-      <p><%= character.name %></p>
-    </div></a>
+    <% if character.status == "deceased" || character.status == "Deceased" || character.status == "Dead" || character.status == "dead" %>
+      <a href="/characters/<%= character.id %>"><div class="character_box deceased">
+        <img class="headshot" src="<%= character.img_url %>" alt="<%= character.name %>'s Picture">
+        <h2><%= character.name %></h2>
+      </div></a>
+    <% else %>
+      <a href="/characters/<%= character.id %>"><div class="character_box">
+        <img class="headshot" src="<%= character.img_url %>" alt="<%= character.name %>'s Picture">
+        <h2><%= character.name %></h2>
+      </div></a>
+    <% end %>
   <% end %>
   <a href="/characters/<%= @house.id %>/new"><div class="character_box">
     <img class="index_sigil" src="http://downloadicons.net/sites/default/files/plus-icon-91547.png" alt="Addition Sign">
