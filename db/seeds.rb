@@ -69,6 +69,3 @@ alliser = watch.characters.create(name: "Alliser Thorne", gender: "male", img_ur
 grenn = watch.characters.create(name: "Grenn", gender: "male", img_url: "http://vignette2.wikia.nocookie.net/gameofthrones/images/6/6f/Grenn-Profile-HD.jpg/revision/latest?cb=20160712080907", status: "deceased")
 pypar = watch.characters.create(name: "Pypar", gender: "male", img_url: "http://vignette3.wikia.nocookie.net/gameofthrones/images/e/e6/Pypar-mockingbird.jpg/revision/latest?cb=20161215025708", status: "deceased")
 olly = watch.characters.create(name: "Olly", gender: "male", img_url: "http://vignette1.wikia.nocookie.net/gameofthrones/images/5/51/602_Olly_Promo_Crop.png/revision/latest?cb=20160708062640", status: "deceased")
-
-
-characters.create(name: "", gender: "", img_url: "", status: "")
