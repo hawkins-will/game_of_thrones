@@ -1,0 +1,29 @@
+<h1>Let's make a new house!</h1>
+
+<form action="/houses" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="house[name]">Name of House:</label>
+  <br>
+  <input name="house[name]">
+
+  <br>
+  <br>
+
+  <label for="house[sigil_url]">URL for House Sigil:</label>
+  <br>
+  <input name="house[sigil_url]">
+
+  <br>
+  <br>
+
+  <label for="house[words]">House Words (or Motto, if you will):</label>
+  <br>
+  <input name="house[words]">
+
+  <br>
+  <br>
+  <br>
+
+  <input type="submit" value="Create House">
+</form>

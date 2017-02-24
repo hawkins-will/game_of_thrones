@@ -1,0 +1,8 @@
+<h1><%= @house.name %> (<a href="/houses/<%= @house.id %>/edit">EDIT</a>)</h1>
+<img class="show_sigil" src="<%= @house.sigil_url %>" alt="House <%= @house.name %> Sigil'">
+
+<h2>Members of House <%= @house.name %></h2>
+<% @house.characters.each do |character| %>
+  <p><%= character.name %></p>
+<% end %>
+<p><a href="#">Create Character</a></p>
